@@ -289,7 +289,6 @@ function setpaths()
     if [ -n "$ANDROID_CCACHE_DIR" ]; then
         export CCACHE_DIR=$ANDROID_CCACHE_DIR
     fi
-<<<<<<< HEAD
  
     if [ ! "$CCACHE_DIR" ] && [ "$USE_CCACHE" == 1 ]; then
         export CCACHE_DIR=~/.ccache
@@ -311,8 +310,6 @@ function setpaths()
             prebuilts/misc/linux-x86/ccache/ccache -M $CCACHE_SIZE
         fi
     fi
-=======
->>>>>>> 9d59c59ae8e620abd26c4c18f120bdccf3d7bfa8
 
     # needed for building linux on MacOS
     # TODO: fix the path
@@ -2510,11 +2507,7 @@ function set_java_home() {
                 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
                 ;;
             *)
-<<<<<<< HEAD
-                export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-=======
                 export JAVA_HOME=$(dirname $(dirname $(dirname $(readlink -f $(which java)))))
->>>>>>> 9d59c59ae8e620abd26c4c18f120bdccf3d7bfa8
                 ;;
         esac
       else
@@ -2523,11 +2516,7 @@ function set_java_home() {
                 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
                 ;;
             *)
-<<<<<<< HEAD
-                export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-=======
                 export JAVA_HOME=$(dirname $(dirname $(dirname $(readlink -f $(which java)))))
->>>>>>> 9d59c59ae8e620abd26c4c18f120bdccf3d7bfa8
                 ;;
         esac
       fi
