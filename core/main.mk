@@ -125,7 +125,11 @@ $(shell mkdir -p $(OUT_DIR) && \
 BUILD_NUMBER_FROM_FILE := $(shell cat $(OUT_DIR)/build_number.txt)
 BUILD_DATETIME_FROM_FILE := $(shell cat $(OUT_DIR)/build_date.txt)
 ifeq ($(HOST_OS),darwin)
+<<<<<<< HEAD
 DATE_FROM_FILE := date -d $(BUILD_DATETIME_FROM_FILE)
+=======
+DATE_FROM_FILE := date -r $(BUILD_DATETIME_FROM_FILE)
+>>>>>>> 9d59c59ae8e620abd26c4c18f120bdccf3d7bfa8
 else
 DATE_FROM_FILE := date -d @$(BUILD_DATETIME_FROM_FILE)
 endif
