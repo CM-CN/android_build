@@ -1678,9 +1678,9 @@ endef
 
 # Add BUILD_NUMBER to apps default version name if it's unbundled build.
 ifdef TARGET_BUILD_APPS
-APPS_DEFAULT_VERSION_NAME := $(PLATFORM_VERSION)-$(BUILD_NUMBER)
+APPS_DEFAULT_VERSION_NAME := $(USER).$(TARGET_DEVICE)-$(PLATFORM_VERSION)-$(shell date +%Y%m%d%H%M)
 else
-APPS_DEFAULT_VERSION_NAME := $(PLATFORM_VERSION)
+APPS_DEFAULT_VERSION_NAME := $(USER).$(TARGET_DEVICE)-$(PLATFORM_VERSION)-$(shell date +%Y%m%d%H%M)
 endif
 
 # TODO: Right now we generate the asset resources twice, first as part
